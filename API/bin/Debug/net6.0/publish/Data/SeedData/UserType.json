@@ -1,0 +1,22 @@
+[
+{
+    "Name_ar": "مدير",
+    "Name_en": "Admin"
+},
+{
+    "Name_ar": "مشرف",
+    "Name_en": "Manager"
+}
+,
+{
+    "Name_ar": "معلم",
+    "Name_en": "Teacher"
+}
+,
+{
+    "Name_ar": "طالب",
+    "Name_en": "Student"
+}
+
+
+]

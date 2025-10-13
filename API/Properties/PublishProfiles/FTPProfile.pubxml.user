@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+https://go.microsoft.com/fwlink/?LinkID=208121.
+-->
+<Project>
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <EncryptedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAxU7CE709Pkm0hU19oxSfcgAAAAACAAAAAAAQZgAAAAEAACAAAAC5n3EVrmk4m2pFMCNIswUJRg2+yn+zuJnwYWLaOtJVCgAAAAAOgAAAAAIAACAAAAAdjsWGv2IFY9xPB1QDzEEXwHJL3tmJ65t7aFI2W0FXMyAAAADnMhpHg93MVitf5HATsULC4rmA1L5WWcAGuWtOL0Kkn0AAAACUEh2nnnF/J2yboAsTw1buYfGGXJpxBa5uBMMdDPV+heEqtUPZj14OiJrmGDf2/WN20wTvE7dJ1XSHhKzaBZ3R</EncryptedPassword>
+    <History>False|2024-09-18T08:00:10.3464842Z;False|2024-09-18T10:57:53.7161353+03:00;False|2024-09-18T10:55:49.8992274+03:00;False|2024-09-18T10:49:53.1882203+03:00;</History>
+    <LastFailureDetails />
+    <_PublishTargetUrl>ftp://ajyal.somee.com/www.ajyal.somee.com</_PublishTargetUrl>
+  </PropertyGroup>
+  <ItemGroup>
+    <DestinationConnectionStrings Include="DefaultConnection">
+      <Value>workstation id=ajyalDB.mssql.somee.com%3bpacket size=4096%3buser id=Mostafa5020_SQLLogin_1%3bpwd=3wdrjj9jew%3bdata source=ajyalDB.mssql.somee.com%3bpersist security info=False%3binitial catalog=ajyalDB%3bTrustServerCertificate=True%3b</Value>
+    </DestinationConnectionStrings>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,38 @@
+[
+  {
+    "Name": "الحفظ",
+    "ArabSallaryPrice": 25,
+    "ForignSallaryPrice": 70,
+    "IsDeleted" : false,
+    "IsPermanentlyDeleted" : false
+
+  },
+  {
+    "Name": "الترديد",
+    "ArabSallaryPrice": 30,
+    "ForignSallaryPrice": 70,
+    "IsDeleted" : false,
+    "IsPermanentlyDeleted" : false
+  },
+  {
+    "Name": "الاجازة",
+    "ArabSallaryPrice": 30,
+    "ForignSallaryPrice": 70,
+    "IsDeleted" : false,
+    "IsPermanentlyDeleted" : false
+  },
+  {
+    "Name": "تاسيس",
+    "ArabSallaryPrice": 40,
+    "ForignSallaryPrice": 70,
+    "IsDeleted" : false,
+    "IsPermanentlyDeleted" : false
+  },
+  {
+    "Name": "الناطقين بغير العربية",
+    "ArabSallaryPrice": 0,
+    "ForignSallaryPrice": 70,
+    "IsDeleted" : false,
+    "IsPermanentlyDeleted" : false
+  }
+]
