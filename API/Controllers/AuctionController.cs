@@ -1,14 +1,12 @@
 
 using API.DTOs;
-using API.Interfaces;
-using AutoMapper;
-using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Mvc;
-
-using UnitOfWork;
-using API.Error;
-using Microsoft.AspNetCore.Http;
 using API.Entities;
+using API.Error;
+using API.Interfaces;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
+using UnitOfWork;
 
 namespace API.Controllers
 {
@@ -21,12 +19,10 @@ namespace API.Controllers
 
     public AuctionController(
         IUnitOfWork uow,
-        IMapper mapper
-,
-        IRepository<Auction> AuctionRepository)
+        IRepository<Auction> auctionRepository)
     {
       _uow = uow;
-      _auctionRepository = AuctionRepository;
+      _auctionRepository = auctionRepository;
     }
     [HttpPost("add")]
     public virtual async Task<IActionResult> Add([FromForm] AuctionDto dto)
