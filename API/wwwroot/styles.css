@@ -1,0 +1,215 @@
+:root {
+  color-scheme: light;
+  --background: #f6f7fb;
+  --card: #ffffff;
+  --accent: #1e88e5;
+  --accent-dark: #0d47a1;
+  --text: #1f2933;
+  --text-muted: #5d6b7b;
+  --danger: #d32f2f;
+  --border: #dbe1ea;
+  font-family: "Tajawal", "Segoe UI", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: var(--background);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+header {
+  background: var(--card);
+  padding: 2rem 3vw 1.5rem;
+  border-bottom: 1px solid var(--border);
+}
+
+header h1 {
+  margin: 0 0 0.5rem;
+  font-size: clamp(1.8rem, 3vw, 2.4rem);
+}
+
+header p {
+  margin: 0;
+  color: var(--text-muted);
+}
+
+main {
+  padding: 2rem 3vw 3rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+}
+
+.card {
+  background: var(--card);
+  padding: 1.5rem;
+  border-radius: 14px;
+  box-shadow: 0 10px 30px rgba(15, 30, 60, 0.08);
+  border: 1px solid rgba(12, 40, 70, 0.04);
+}
+
+.card h2 {
+  margin-top: 0;
+  font-size: 1.4rem;
+}
+
+form label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  color: var(--text-muted);
+  font-weight: 600;
+}
+
+form input,
+form textarea,
+form button,
+button {
+  font-family: inherit;
+}
+
+form input,
+form textarea {
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  padding: 0.7rem 0.9rem;
+  font-size: 1rem;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+form input:focus,
+form textarea:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(30, 136, 229, 0.18);
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.file-input input[type="file"] {
+  border: 1px dashed var(--border);
+  padding: 1rem;
+  background: rgba(30, 136, 229, 0.04);
+}
+
+.form-actions {
+  margin-top: 1.5rem;
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+button {
+  border: none;
+  border-radius: 999px;
+  padding: 0.65rem 1.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+button:hover:not(:disabled) {
+  transform: translateY(-2px);
+}
+
+#submit-button {
+  background: linear-gradient(135deg, var(--accent), #64b5f6);
+  color: #fff;
+}
+
+.secondary {
+  background: rgba(15, 30, 60, 0.05);
+  color: var(--text);
+}
+
+button.delete {
+  background: rgba(211, 47, 47, 0.1);
+  color: var(--danger);
+}
+
+button.delete:hover {
+  background: rgba(211, 47, 47, 0.2);
+}
+
+.table-wrapper {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 480px;
+}
+
+thead {
+  background: rgba(15, 30, 60, 0.05);
+}
+
+thead th {
+  text-align: right;
+  padding: 0.75rem;
+  font-weight: 700;
+  color: var(--text-muted);
+}
+
+tbody td {
+  padding: 0.75rem;
+  border-bottom: 1px solid var(--border);
+}
+
+tbody tr:last-child td {
+  border-bottom: none;
+}
+
+tbody tr:hover {
+  background: rgba(30, 136, 229, 0.05);
+}
+
+td.actions {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: flex-start;
+}
+
+.empty {
+  text-align: center;
+  color: var(--text-muted);
+}
+
+#form-message {
+  margin-top: 1rem;
+  min-height: 1.5rem;
+}
+
+#form-message.error {
+  color: var(--danger);
+}
+
+@media (max-width: 600px) {
+  main {
+    padding: 1.5rem 5vw 2.5rem;
+  }
+
+  .card {
+    padding: 1.25rem;
+  }
+
+  table {
+    min-width: unset;
+  }
+}

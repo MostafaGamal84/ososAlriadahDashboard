@@ -18,20 +18,9 @@ namespace API.Helpers
       CreateMap<DateTime, DateTime>().ConvertUsing(x => DateTime.SpecifyKind(x, DateTimeKind.Utc));
       CreateMap<AdminAddDto, Admin>();
       CreateMap<Admin, AdminReDto>();
-      CreateMap<About, AboutDto>().ReverseMap();
-      CreateMap<Contact, ContactDto>().ReverseMap();
-      CreateMap<Service, ServiceDto>().ReverseMap();
-      CreateMap<TermsAndCond, TermsAndCondDto>().ReverseMap();
-      CreateMap<BlogType, BlogTypeDto>().ReverseMap();
-      CreateMap<Blog, BlogReDto>();
-      CreateMap<BlogDto, Blog>();
-      CreateMap<BannerDto, Banner>();
-      CreateMap<Banner, BannerReDto>();
-      CreateMap<CustomerDto, Customer>();
-      CreateMap<Customer, CustomerReDto>();
-       CreateMap<AuctionDto, Auction>();
+      CreateMap<AuctionDto, Auction>();
       CreateMap<Auction, AuctionReDto>();
-     
+
 
     }
     private bool IsDefaultValue(object value)
