@@ -1,8 +1,6 @@
 
 using API.DTOs;
 using API.DTOs.Admin;
-using API.Interfaces;
-using AutoMapper;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
@@ -15,20 +13,13 @@ namespace API.Controllers
   [AllowAnonymous]
   public class AdminController : BaseApiController
   {
-    private readonly ITokenService _tokenService;
-
     private readonly IUnitOfWork _uow;
 
     public AdminController(
-        IUnitOfWork uow,
-
-        ITokenService tokenService,
-        IMapper mapper
+        IUnitOfWork uow
     )
     {
       _uow = uow;
-
-      _tokenService = tokenService;
     }
     [HttpPost("add")]
     public virtual async Task<IActionResult> Add(AdminAddDto dto)
