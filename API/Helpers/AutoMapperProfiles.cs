@@ -19,7 +19,8 @@ namespace API.Helpers
       CreateMap<AdminAddDto, Admin>();
       CreateMap<Admin, AdminReDto>();
       CreateMap<AuctionDto, Auction>();
-      CreateMap<Auction, AuctionReDto>();
+      CreateMap<Auction, AuctionReDto>()
+      .ForMember(dest => dest.Url, opts => opts.MapFrom(r => r.Url));;
 
 
     }

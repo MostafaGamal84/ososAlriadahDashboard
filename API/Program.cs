@@ -3,7 +3,16 @@ internal class Program
   private static async Task Main(string[] args)
   {
     var builder = WebApplication.CreateBuilder(args);
-
+  const string AllowAll = "AllowAll";
+    builder.Services.AddCors(options =>
+    {
+      options.AddPolicy(AllowAll, policy =>
+        policy
+          .AllowAnyOrigin()
+          .AllowAnyHeader()
+          .AllowAnyMethod()
+      );
+    });
     builder.Services.AddApplicationServices(builder.Configuration);
     builder.Services.AddControllers();
     builder.Services.AddSwaggerGen(c =>
@@ -23,13 +32,16 @@ internal class Program
       app.UseSwagger();
       app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "API v1"));
     }
+        app.UseDefaultFiles();
+
+    app.UseStaticFiles();
 
     app.UseHttpsRedirection();
+
     app.UseRouting();
+      app.UseCors(AllowAll);
     app.UseAuthorization();
     app.MapControllers();
-    app.UseDefaultFiles();
-    app.UseStaticFiles();
 
 
 

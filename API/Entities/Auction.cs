@@ -11,7 +11,7 @@ namespace API.Entities
 {
     public class Auction : BaseEntity
     {
-    public string Name { get; set; } = default!;
+    public string Name { get; set; }
 
     // التواريخ
     public DateTime Start { get; set; }
